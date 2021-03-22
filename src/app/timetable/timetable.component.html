@@ -1,0 +1,39 @@
+<mat-card>
+<mat-toolbar color='basic'>My Timetable</mat-toolbar>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Day Column -->
+    <ng-container matColumnDef="day">
+      <th mat-header-cell *matHeaderCellDef> Day </th>
+      <td mat-cell *matCellDef="let element"> {{element.day}} </td>
+    </ng-container>
+  
+    <!-- Period 1 Column -->
+    <ng-container matColumnDef="period1">
+      <th mat-header-cell *matHeaderCellDef> Period 1</th>
+      <td mat-cell *matCellDef="let element"> {{element.period1}} </td>
+    </ng-container>
+  
+    <!-- Period 2 Column -->
+    <ng-container matColumnDef="period2">
+      <th mat-header-cell *matHeaderCellDef> Period 2 </th>
+      <td mat-cell *matCellDef="let element"> {{element.period2}} </td>
+    </ng-container>
+  
+    <!-- Period 3 Column -->
+    <ng-container matColumnDef="period3">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.period3}} </td>
+    </ng-container>
+
+    <!-- Period 4 Column -->
+    <ng-container matColumnDef="period4">
+        <th mat-header-cell *matHeaderCellDef> period 4 </th>
+        <td mat-cell *matCellDef="let element"> {{element.period4}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
+  

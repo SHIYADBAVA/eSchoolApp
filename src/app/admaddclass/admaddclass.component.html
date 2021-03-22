@@ -1,0 +1,51 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="Class-card">
+    <mat-card-header>
+      <mat-card-title>Add New Class</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Class Number" formControlName="classNo">
+            <mat-error *ngIf="addressForm.controls['classNo'].hasError('required')">
+              Class number is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Class name" formControlName="className">
+            <mat-error *ngIf="addressForm.controls['className'].hasError('required')">
+              Class name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Class Teacher" formControlName="classteacher">
+            <mat-error *ngIf="addressForm.controls['classteacher'].hasError('required')">
+              Class teacher name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Student Count" formControlName="stdcount">
+            <mat-error *ngIf="addressForm.controls['stdcount'].hasError('required')">
+              Student count is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

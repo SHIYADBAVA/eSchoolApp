@@ -1,0 +1,15 @@
+table 
+{
+    padding: 3%px;
+    align-items: center;
+    width: 100%;
+}
+mat-card
+{
+    padding: 15px;
+}
+.example-spacer 
+{
+    flex: 1 1 auto;
+}
+  

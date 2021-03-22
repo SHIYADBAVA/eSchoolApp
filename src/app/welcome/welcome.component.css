@@ -1,0 +1,13 @@
+.main-div mat-card
+{
+    padding: 0px;
+}
+.Login-form
+{
+     padding: 20px;
+}
+button
+{
+    padding: 5px;
+    margin-top: 5px;
+}

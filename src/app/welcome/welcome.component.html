@@ -1,0 +1,11 @@
+<div fxLayoutAlign="center center" fxFlexFill  class="main-div">
+    <mat-card fxFlex="30">
+    <mat-toolbar color='primary' >Choose Usertype</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout='column' class="Login-form">
+            <button mat-raised-button color='primary' class="btn-block" type="submit" routerLink="/student">Student Login</button>
+            <button mat-raised-button color='primary' class="btn-block" type="block" routerLink="/faculty">Faculty Login</button>
+            <button mat-raised-button color='primary' class="btn-block" type=" admin" routerLink="/admin">Admin Login</button>
+          </form>
+    </mat-card>
+</div>
+<router-outlet></router-outlet>
