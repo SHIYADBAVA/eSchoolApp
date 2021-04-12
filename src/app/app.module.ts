@@ -38,16 +38,22 @@ import { FtyclassComponent } from './ftyclass/ftyclass.component';
 import { FtycourseComponent } from './ftycourse/ftycourse.component';
 import { AdmclassComponent } from './admclass/admclass.component';
 import { AdmstudentComponent } from './admstudent/admstudent.component';
-import { AdmcourseComponent } from './admcourse/admcourse.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AdmfacultyComponent } from './admfaculty/admfaculty.component';
 import { AdmaddclassComponent } from './admaddclass/admaddclass.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FtystudentComponent } from './ftystudent/ftystudent.component';
+import { AdmaddComponent } from './admadd/admadd.component';
+import { AdmaddstdComponent } from './admaddstd/admaddstd.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdmaddftyComponent } from './admaddfty/admaddfty.component';
+import { AdmstudentService } from './admstudent.service';
+import { FacultylistService } from './facultylist.service';
+import { AuthService } from './auth.service';
+import { FtystudentService } from './ftystudent.service';
 
 
 
@@ -75,9 +81,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     FtycourseComponent,
     AdmclassComponent,
     AdmstudentComponent,
-    AdmcourseComponent,
     AdmfacultyComponent,
-    AdmaddclassComponent
+    AdmaddclassComponent,
+    FtystudentComponent,
+    AdmaddComponent,
+    AdmaddstdComponent,
+    AdmaddftyComponent
   ],
   imports: [
     BrowserModule,
@@ -101,8 +110,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatRadioModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [AdmstudentService, FacultylistService, AuthService, FtystudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

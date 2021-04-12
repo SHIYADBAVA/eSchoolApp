@@ -1,0 +1,33 @@
+    <div class="grid-container">
+      <mat-card class="dashbord-card">
+        <div class="card-header">
+          <mat-toolbar class="mat-h1" color="basic"><h1>Students List</h1></mat-toolbar>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Name</th>
+                            <th>ClassName</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Register No.</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let student of students" id="tabledata">
+                            <td>{{student.name}}</td>
+                            <td>{{student.classname}}</td>
+                            <td>{{student.username}}</td>
+                            <td>{{student.email}}</td>
+                            <td>{{student.regno}}</td>
+                            <td><button mat-riased-button color='primary'>Open</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </mat-card>
+    </div>

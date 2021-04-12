@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-studentlogin',
@@ -6,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./studentlogin.component.css']
 })
 export class StudentloginComponent implements OnInit {
+  
 
-  constructor() { }
+  Student={
+    username:"",
+    password: "",
+  }
+
+  constructor(private _auth: AuthService, private _router:Router, private fb:FormBuilder) { }
 
   ngOnInit(): void {
   }
-
+  // Student Login Function 
+  studentLogin()
+  {
+    this._auth.studentLogin(this.Student)
+    .subscribe(
+      res=>{
+        localStorage.setItem('token',res.token)
+        this._router.navigate(['/student/home'])
+      }
+    )
+  }
 }

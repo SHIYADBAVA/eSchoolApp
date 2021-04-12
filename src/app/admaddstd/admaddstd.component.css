@@ -1,0 +1,14 @@
+.main-div mat-card
+{
+    padding: 0px;
+}
+.form
+{
+     padding: 20px;
+     width: 100%;
+}
+#inpbox
+{
+    width: 60%;
+    padding: 5px;
+}

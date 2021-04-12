@@ -13,10 +13,10 @@ export class StudentdashComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'My Timetable', cols: 1, rows: 1 },
-          { title: 'My Attandance', cols: 1, rows: 1 },
-          { title: 'My Performance', cols: 1, rows: 1 },
-          { title: 'Assignments', cols: 1, rows: 1 }
+          { title: 'My Timetable', cols: 2, rows: 1 },
+          { title: 'My Attandance', cols: 2, rows: 1 },
+          { title: 'My Performance', cols: 2, rows: 1 },
+          { title: 'Assignments', cols: 2, rows: 1 }
         ];
       }
 
@@ -30,4 +30,4 @@ export class StudentdashComponent {
   );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-}
+  }

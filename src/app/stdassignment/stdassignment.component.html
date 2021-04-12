@@ -30,7 +30,7 @@
             <!-- Button Column -->
             <ng-container matColumnDef="select">
               <th mat-header-cell *matHeaderCellDef> Select </th>
-              <td mat-cell *matCellDef="let element"> {{element.select}} <button color='primary'>Open</button> </td>
+              <td mat-cell *matCellDef="let element"> {{element.select}} <a routerLink="/:id"><button mat-raised-button  color='primary'>Open</button></a> </td>
             </ng-container>
           
           

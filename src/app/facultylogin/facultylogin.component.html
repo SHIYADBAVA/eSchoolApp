@@ -1,16 +1,16 @@
 <div fxLayoutAlign="center center" fxFlexFill  class="main-div">
-    <mat-card fxFlex="30">
-    <mat-toolbar color='primary'>Faculty Login</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout='column' class="Login-form">
-            <mat-form-field>
-              <input matInput placeholder="Username">
-            </mat-form-field>
-          
-            <mat-form-field>
-                <input matInput type="password" placeholder="Password">
-            </mat-form-field>
-            <button mat-raised-button color='primary' class="btn-block" type="submit" routerLink="/faculty/home">Login</button>
-          </form>
-    </mat-card>
+  <mat-card fxFlex="30">
+  <mat-toolbar color='primary'>Faculty Login</mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout='column' class="form" #facultylogin="ngForm" (ngSubmit)="facultyLogin()">
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Username" name="username" class="form-control" [(ngModel)]="Faculty.username" required>
+          </mat-form-field>
+        
+          <mat-form-field class="form-group">
+              <input matInput type="password" name="password" placeholder="Password" class="form-control" [(ngModel)]="Faculty.password" minlength="8" required>
+          </mat-form-field>
+          <button mat-raised-button color='primary' class="btn-block" type="submit"  [disabled]="facultylogin.form.invalid">Login</button>
+        </form>
+  </mat-card>
 </div>
 <router-outlet></router-outlet>

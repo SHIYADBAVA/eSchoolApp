@@ -1,10 +1,16 @@
 table 
 {
-    padding: 3%px;
+    padding: 5%px;
     align-items: center;
-    width: 100%;
+    width: 98%;
+    background-color:blanchedalmond;
+    margin-left: 5px;
 }
-mat-card
+.card
 {
     padding: 15px;
+}
+#tabledata
+{
+    text-align: center;
 }

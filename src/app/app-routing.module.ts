@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdmaddclassComponent } from './admaddclass/admaddclass.component';
 import { AdmclassComponent } from './admclass/admclass.component';
-import { AdmcourseComponent } from './admcourse/admcourse.component';
 import { AdmfacultyComponent } from './admfaculty/admfaculty.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdmindashComponent } from './admindash/admindash.component';
@@ -21,6 +20,9 @@ import { StudentdashComponent } from './studentdash/studentdash.component';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { FtystudentComponent } from './ftystudent/ftystudent.component';
+import { AdmaddstdComponent } from './admaddstd/admaddstd.component';
+import { AdmaddftyComponent } from './admaddfty/admaddfty.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,10 @@ const routes: Routes = [
     path:'student',
     component:StudentComponent,
     children:[
+      {
+        path:'login',
+        component:StudentdashComponent
+      },      
       {
         path:'timetable',
         component:TimetableComponent
@@ -72,16 +78,20 @@ const routes: Routes = [
     component:FacultyComponent,
     children:[
       {
+        path:'login',
+        component:FacultydashComponent
+      },
+      {
         path:'home',
         component:FacultydashComponent
       },
       {
-        path:'class',
-        component:FtyclassComponent
+        path:'timetable',
+        component:FtycourseComponent
       },
       {
-        path:'course',
-        component:FtycourseComponent
+        path:'student',
+        component:FtystudentComponent
       },
     ]
   },
@@ -94,30 +104,28 @@ const routes: Routes = [
     component:AdminComponent,
     children:[
       {
-        path:'home',
+        path:'login',
         component:AdmindashComponent
       },
       {
-        path:'class',
-        component:AdmclassComponent,
-        children:[
-          {
-            path:'addclass',
-            component:AdmaddclassComponent
-          },
-        ]
+        path:'home',
+        component:AdmindashComponent
       },
       {
         path:'student',
         component:AdmstudentComponent
       },
       {
-        path:'course',
-        component:AdmcourseComponent
+        path:'addstudent',
+        component:AdmaddstdComponent
       },
       {
         path:'faculty',
         component:AdmfacultyComponent
+      },
+      {
+        path:'addfaculty',
+        component:AdmaddftyComponent
       },
     ]
   },
